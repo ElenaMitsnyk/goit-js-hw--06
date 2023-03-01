@@ -6,8 +6,8 @@ form.addEventListener('submit', (event) => {
         elements: {email, password},
     } = event.currentTarget;
     const inputValue = {
-        email,
-        password
+        [email.name]: email.value,
+        [password.name]: password.value
     }
     console.log(inputValue)
     if (email.value === '' || password.value === '') {
